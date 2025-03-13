@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f9fbfc;
+  --foreground: #25272a;
+  --text-highlight: #050505;
+
+  --change-language-bg: 0deg, rgba(9, 9, 11, 0.05) 0%, rgba(9, 9, 11, 0.1) 100%;
+  --be-customer-bg: 100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0) 100%;
 }
 
 @theme inline {
@@ -14,13 +19,51 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #f9fbfc;
+    --foreground: #25272a;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Raleway, sans-serif;
 }
+
+/* START OF HOME BODY */
+.blur-bg {
+  @apply w-[31.25rem] h-[31.25rem] bg-gradient-to-r from-[#E0FFCC] to-[#CCFFEC] blur-[133.72px];
+}
+
+.linear-gradient-txt {
+  @apply bg-[linear-gradient(90deg,_#53B086_0%,_#53B086_20.91%,_#85EEB3_71%,_#53B086_0)] bg-clip-text text-transparent text-[64px] font-extrabold leading-[100px] capitalize;
+}
+
+.custom-underline-txt {
+  @apply text-(--text-highlight) text-[64px] font-extrabold leading-[100px] capitalize relative after:content-[""] after:absolute after:bottom-0 after:left-0 after:h-8 after:w-full after:bg-[#85EEB3] after:rounded-full after:opacity-60;
+}
+
+.custom-underline-txt span {
+  @apply relative z-1;
+}
+
+.blogs-banner {
+  background: linear-gradient(
+    78deg,
+    #013da0 11.85%,
+    #0142a9 20.65%,
+    #0148b3 29.45%,
+    #024ebc 38.25%,
+    #0254c5 47.05%,
+    #025ace 55.84%,
+    #0261d7 64.64%,
+    #0267e1 73.44%,
+    #036eea 82.24%,
+    #0375f3 91.04%
+  );
+}
+
+.blogs-list {
+  @apply mt-12 grid grid-cols-2 gap-x-8 gap-y-12;
+}
+/* END OF HOME BODY */

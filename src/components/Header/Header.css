@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/* START OF HEADER CSS */
+.header {
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: -1px 1px 0px 0px #f0f0f0, 1px -1px 0px 0px #fff,
+    -8.999px 19.998px 59.993px -23.997px rgba(0, 0, 0, 0.05),
+    0px 2px 83.99px 0px rgba(0, 0, 0, 0.02) inset;
+  backdrop-filter: blur(12.498550415039062px);
+}
+
+.header {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.be-customer {
+  background: radial-gradient(
+      100% 100% at 50% 0%,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    #1ad598;
+}
+
+.nav-link {
+  @apply flex gap-2 px-2 pt-1;
+}
+
+.nav-link span {
+  @apply text-sm font-medium transition-all duration-200 ease-in-out flex flex-col items-center gap-1 after:content-[''] after:w-1.5 after:h-1.5 after:rounded-full after:bg-transparent after:transition-all after:duration-200 after:ease-in-out;
+}
+
+.nav-link svg {
+  @apply mt-0.5;
+}
+
+.nav-link.active span,
+.nav-link:hover span {
+  @apply text-sm font-bold after:bg-[#1AD598];
+}
+
+.dropdown-menu {
+  @apply relative;
+}
+
+.dropdown-menu:hover .dropdown-list {
+  @apply block;
+}
+
+.dropdown-list {
+  @apply absolute top-[100%] left-0 rounded-md bg-white shadow-md;
+}
+
+.dropdown-list li {
+  @apply px-6 py-2 transition-all duration-200 ease-in-out;
+}
+
+.dropdown-list li:hover {
+  @apply bg-gray-100;
+}
+
+.dropdown-list a {
+  @apply text-sm font-medium whitespace-nowrap flex gap-2 items-center min-w-max;
+}
+/* END OF HEADER CSS */
