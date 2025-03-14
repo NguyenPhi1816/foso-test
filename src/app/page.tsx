@@ -2,9 +2,7 @@ import BlogPage from "@/components/BlogPage/BlogPage";
 import Link from "next/link";
 
 export default async function Home() {
-  const categoryResponse = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/category`
-  );
+  const categoryResponse = await fetch(`${process.env.API_URL}/api/category`);
   const categories = await categoryResponse.json();
 
   return (
