@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+.blog-content figure {
+  @apply w-full flex flex-col justify-center items-center gap-[0.5rem];
+}
+
+.blog-content figure img {
+  @apply w-full object-cover;
+}
+
+.blog-content h2 {
+  @apply mb-4 text-xl font-extrabold text-[#15AA7A];
+}
+
+.blog-content h3 {
+  @apply font-bold text-[#15AA7A];
+}
+
+.blog-content p {
+  @apply mb-4 font-medium;
+}
+
+.blog-content ul {
+  @apply mb-4 !list-disc list-outside pl-[revert];
+}
+
+.blog-content ul {
+  list-style: circle !important;
+}
+
+.blog-content ul li {
+  @apply mb-2 flex items-center gap-1;
+}
+
+.blog-content ul li p {
+  @apply mb-0;
+}
+
+.blog-content ul li span {
+  @apply font-bold text-[#15AA7A];
+}
+
+.rating button {
+  @apply p-1 w-[90px] flex flex-col justify-center items-center gap-1 rounded-sm transition-all duration-200 ease-in-out border border-[#0000];
+}
+
+.rating button.active,
+.rating button:hover {
+  @apply border-[#10805B];
+}
+
+.rating button img {
+  @apply w-[48px] h-[48px] object-contain;
+}
+
+.rating button div {
+  @apply font-bold transition-all duration-200 ease-in-out;
+}
+
+.rating button.active div,
+.rating button.active span,
+.rating button:hover div,
+.rating button:hover span {
+  @apply text-[#10805B];
+}
+
+.rating button span {
+  @apply text-sm font-medium transition-all duration-200 ease-in-out;
+}
+
+.active-heading {
+  @apply font-bold text-[#15AA7A];
+}

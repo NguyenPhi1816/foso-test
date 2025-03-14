@@ -1,10 +1,20 @@
 import Link from "next/link";
+import React from "react";
 
-const Blog = () => {
+export type TBlog = {
+  image: string;
+  category: string;
+  name: string;
+  date: string;
+  long: string;
+  href: string;
+};
+
+const Blog: React.FC<TBlog> = ({ image, category, name, date, long, href }) => {
   return (
     <div className="flex flex-col gap-4">
       <img
-        src="/blog-thumbnail.png"
+        src={image}
         alt="Blog thumbnail"
         className="mb-2 w-full h-[29.6875rem]"
       />
@@ -12,10 +22,10 @@ const Blog = () => {
         href="/"
         className="w-fit text-[#0F4F9E] text-[0.75rem] font-medium py-1 px-2 rounded-lg bg-[#E2F0FE]"
       >
-        Quản Lý Sản Xuất
+        {category}
       </Link>
-      <Link href="/" className="text-2xl font-extrabold text-[#33404A]">
-        Tại sao BOM quan trọng trong quản lý sản xuất?
+      <Link href={href} className="text-2xl font-extrabold text-[#33404A]">
+        {name}
       </Link>
       <div className="flex items-center gap-3">
         <div className="flex items-center gap-2 text-[#667F93] text-md">
@@ -31,7 +41,7 @@ const Blog = () => {
               fill="#667F93"
             />
           </svg>
-          17/11/2022
+          {date}
         </div>
         <div className="w-[1px] h-6 bg-[#D9E1E7]"></div>
         <div className="flex items-center gap-2 text-[#667F93] text-md">
@@ -47,11 +57,11 @@ const Blog = () => {
               fill="#667F93"
             />
           </svg>
-          10 phút đọc
+          {long}
         </div>
       </div>
       <Link
-        href="/"
+        href={href}
         className="flex items-center gap-4 text-lg font-semibold text-[#667F93]"
       >
         Khám phá thêm

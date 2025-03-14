@@ -1,4 +1,3 @@
-"use client";
 import "./Header.css";
 import Link from "next/link";
 
@@ -129,25 +128,25 @@ const Header = () => {
           <ul className="dropdown-list hidden">
             <li>
               <Link href={"/"}>
-                <img src="vietnam.png" alt="Vietnam Flag" />
+                <img src="/vietnam.png" alt="Vietnam Flag" />
                 Tiếng Việt
               </Link>
             </li>
             <li>
               <Link href={"/"}>
-                <img src="united-kingdom.png" alt="United Kingdom Flag" />
+                <img src="/united-kingdom.png" alt="United Kingdom Flag" />
                 English
               </Link>
             </li>
             <li>
               <Link href={"/"}>
-                <img src="china.png" alt="China Flag" />
+                <img src="/china.png" alt="China Flag" />
                 Chinese
               </Link>
             </li>
             <li>
               <Link href={"/"}>
-                <img src="japan.png" alt="Japan Flag" />
+                <img src="/japan.png" alt="Japan Flag" />
                 Japanese
               </Link>
             </li>

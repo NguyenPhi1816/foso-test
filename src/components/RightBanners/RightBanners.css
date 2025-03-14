@@ -1,0 +1,40 @@
+.vertical-banner-1 {
+  background: linear-gradient(
+    37deg,
+    #013da0 2.16%,
+    #0142a9 12.83%,
+    #0148b3 23.51%,
+    #024ebc 34.18%,
+    #0254c5 44.85%,
+    #025ace 55.53%,
+    #0261d7 66.2%,
+    #0267e1 76.87%,
+    #036eea 87.55%,
+    #0375f3 98.22%
+  );
+}
+
+.beta-label {
+  background: radial-gradient(
+    59.8% 105.16% at 93.75% 3.57%,
+    #1fc583 0%,
+    #1f9285 100%
+  );
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+.vertical-banner-2 {
+  background: linear-gradient(
+    358deg,
+    #013da0 2.23%,
+    #0142a9 12.81%,
+    #0148b3 23.39%,
+    #024ebc 33.96%,
+    #0254c5 44.54%,
+    #025ace 55.12%,
+    #0261d7 65.7%,
+    #0267e1 76.28%,
+    #036eea 86.86%,
+    #0375f3 97.44%
+  );
+}

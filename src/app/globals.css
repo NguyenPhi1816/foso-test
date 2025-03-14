@@ -66,4 +66,28 @@ body {
 .blogs-list {
   @apply mt-12 grid grid-cols-2 gap-x-8 gap-y-12;
 }
+
+.category-item:not(:last-child) {
+  @apply border-b border-[#F1F5F7];
+}
+
+.outlined-btn {
+  @apply flex items-center px-6 py-2 gap-3 rounded-full border border-white text-white text-sm font-bold;
+}
+
+.pagination-btn {
+  @apply w-10 h-10 flex items-center justify-center rounded-lg font-semibold text-[#809FB8] hover:bg-[#D1F7EA] hover:text-[#052B1E];
+}
+
+.pagination-btn.active {
+  @apply bg-[#D1F7EA] text-[#052B1E];
+}
+
+.next-prev-disabled {
+  @apply text-[#B3C5D4] pointer-events-none;
+}
+
+.next-prev-disabled svg path {
+  @apply fill-[#B3C5D4];
+}
 /* END OF HOME BODY */
