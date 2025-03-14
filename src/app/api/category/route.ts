@@ -37,5 +37,7 @@ const CATEGORIES = [
 ];
 
 export async function GET() {
-  return Response.json(CATEGORIES);
+  return Response.json(CATEGORIES, {
+    headers: { "Access-Control-Allow-Origin": "*" },
+  });
 }
