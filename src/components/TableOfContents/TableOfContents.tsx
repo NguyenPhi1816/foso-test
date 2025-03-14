@@ -24,7 +24,10 @@ export default function TableOfContents() {
     setHeadings(tocItems);
   }, []);
 
-  const handleClick = (event: any, id: string) => {
+  const handleClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    id: string
+  ) => {
     event.preventDefault();
 
     const element = document.getElementById(id);

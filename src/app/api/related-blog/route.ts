@@ -7,6 +7,6 @@ const BLOG = Array.from({ length: 3 }, (_, index) => ({
   href: "/blog/quy-trinh-5s-la-gi",
 }));
 
-export async function GET(request: Request) {
+export async function GET() {
   return Response.json(BLOG);
 }

@@ -36,6 +36,6 @@ const CATEGORIES = [
   },
 ];
 
-export async function GET(request: Request) {
+export async function GET() {
   return Response.json(CATEGORIES);
 }
