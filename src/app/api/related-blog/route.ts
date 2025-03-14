@@ -8,5 +8,7 @@ const BLOG = Array.from({ length: 3 }, (_, index) => ({
 }));
 
 export async function GET() {
-  return Response.json(BLOG);
+  return Response.json(BLOG, {
+    headers: { "Access-Control-Allow-Origin": "*" },
+  });
 }

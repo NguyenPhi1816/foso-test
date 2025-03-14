@@ -15,10 +15,15 @@ export async function GET(request: Request) {
   const endIndex = startIndex + limit;
 
   const paginatedData = BLOG.slice(startIndex, endIndex);
-  return Response.json({
-    data: paginatedData,
-    currentPage: page,
-    totalPages: Math.ceil(BLOG.length / limit),
-    totalItems: BLOG.length,
-  });
+  return Response.json(
+    {
+      data: paginatedData,
+      currentPage: page,
+      totalPages: Math.ceil(BLOG.length / limit),
+      totalItems: BLOG.length,
+    },
+    {
+      headers: { "Access-Control-Allow-Origin": "*" },
+    }
+  );
 }
